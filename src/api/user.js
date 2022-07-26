@@ -2,11 +2,7 @@ import http from "@/utils/http.js";
 
 export const eventList = function () {
   return http.request({
-    // url: "/events",
-    url:
-      process.env.NODE_ENV === "production"
-        ? "/events"
-        : "https://my-json-server.typicode.com/ylc6223/mock-data/events",
+    url: "https://my-json-server.typicode.com/ylc6223/mock-data/events",
     method: "GET",
   });
 };
